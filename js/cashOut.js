@@ -5,5 +5,16 @@ event.preventDefault();
 const cashOutAmount = getInputFieldValueById('input-cash-out-money');
 const cashOutPin = getInputFieldValueById('add-cash-out-pin');
 
-console.log('clicked cash out button', cashOutAmount, cashOutPin);
+if(cashOutPin === 1234){
+    const balance = getTextFieldValueById('account-balance');
+    const newBalance = balance - cashOutAmount;
+    console.log(newBalance);
+    document.getElementById('account-balance').innerText=newBalance;
+
+}
+else{
+    alert('no money for you')
+}
+
+
 })
