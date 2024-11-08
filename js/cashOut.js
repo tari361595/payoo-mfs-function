@@ -7,6 +7,10 @@ const cashOutPin = getInputFieldValueById('add-cash-out-pin');
 
 if(cashOutPin === 1234){
     const balance = getTextFieldValueById('account-balance');
+    if(cashOutAmount>balance){
+        alert('balance is not enough');
+        return;
+    }
     const newBalance = balance - cashOutAmount;
     console.log(newBalance);
     document.getElementById('account-balance').innerText=newBalance;

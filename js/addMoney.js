@@ -9,6 +9,13 @@ document.getElementById('btn-add-money')
     // console.log('added mmoney',addMoney);
     const addMoney = getInputFieldValueById('input-add-money');
     const addPin = getInputFieldValueById('add-input-pin');
+
+       if(isNaN(addMoney)){
+        alert('failede to add money,please input number');
+        return;
+       }
+
+
     if(addPin === 1234){
         const balance = getTextFieldValueById('account-balance');
         // console.log(balance,addMoney);
